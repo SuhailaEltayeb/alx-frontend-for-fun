@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-''' script that takes 2 argument to strings:
-    First argument is the name of the Markdown file
-    Second argument is the output file name
-'''
+""" script that takes 2 argument to strings:
+    1st argument is the name of the Markdown file
+    2nd argument is the output file name
+"""
 
 import sys
 import os.path
@@ -51,7 +51,7 @@ if __name__ == '__main__':
                 unordered_num = length - len(unordered)
                 ordered = line.lstrip('*')
                 ordered_num = length - len(ordered)
-                # headings, lists
+                # headings and lists
                 if 1 <= heading_num <= 6:
                     line = '<h{}>'.format(
                         heading_num) + headings.strip() + '</h{}>\n'.format(
